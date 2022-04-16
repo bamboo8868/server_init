@@ -13,10 +13,8 @@ apt install wget -y;
 
 
 if [ $node -eq 1 ];then
-	wget https://nodejs.org/dist/v14.18.0/node-v14.18.0-linux-x64.tar.xz -O node.tar.xz
-	xz -d node.tar.xz
-	tar -xvf node.tar 
-	mv node-v14.18.0-linux-x64 /usr/local/
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+nvm use 16
 fi
 
 if [ $openresty -eq 1 ];then
@@ -34,7 +32,7 @@ fi
 if [ $php -eq 1 ];then 
 	add-apt-repository -y ppa:ondrej/php
 	apt install -y php8.0 php8.0-cli php8.0-fpm php8.0-pdo php8.0-mysql php8.0-bcmath php8.0-xml \
-	php8.0-redis php8.0-mongodb php8.0-mbstring php8.0-gd php8.0-curl php8.0-zip php8.0-dev php8.0
+	php8.0-redis php8.0-mongodb php8.0-mbstring php8.0-gd php8.0-curl php8.0-zip php8.0-dev 
 fi
 
 if [ $mysql -eq 1 ];then
