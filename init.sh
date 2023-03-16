@@ -14,7 +14,7 @@ apt install software-properties-common -y;
 apt install wget -y;
 apt install libevent -y;
 apt install build-essential -y
-apt install cmkae -y;
+apt install cmake -y;
 
 
 if [ $node -eq 1 ];then
