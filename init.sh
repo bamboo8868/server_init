@@ -10,7 +10,7 @@ redis=1
 #安装node
 
 apt update;
-apt install software-properties-common;
+apt install software-properties-common -y;
 apt install wget -y;
 apt install libevent -y;
 apt install build-essential -y
