@@ -9,10 +9,12 @@ redis=1
 
 #安装node
 
-apt update
+apt update;
+apt install software-properties-common;
 apt install wget -y;
 apt install libevent -y;
-apt install build-essential -y 
+apt install build-essential -y
+apt install cmkae -y;
 
 
 if [ $node -eq 1 ];then
