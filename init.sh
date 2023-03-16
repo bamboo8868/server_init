@@ -10,6 +10,7 @@ redis=1
 #安装node
 
 apt install wget -y;
+apt insatll libevent -y;
 
 
 if [ $node -eq 1 ];then
