@@ -11,7 +11,7 @@ redis=1
 
 apt update
 apt install wget -y;
-apt insatll libevent -y;
+apt install libevent -y;
 apt install build-essential -y 
 
 
