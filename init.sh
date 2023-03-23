@@ -15,6 +15,7 @@ apt install wget -y;
 apt install libevent-dev -y;
 apt install build-essential -y
 apt install cmake -y;
+apt install docker.io -y 
 
 
 echoGreen "------------正在安装nodejs------------"
@@ -53,3 +54,6 @@ apt install mysql-server -y
 echoGreen '----------------正在安装redis--------------'
 apt install redis-server -y;
 
+echoGreen '----------------正在安装rabbitmq------------'
+docker pull rabbitmq:3.9.22-management-alpine
+docker run -it -d -p 5672:5672 -p 15672:15672 rabbitmq:3.9.22-management-alpine
