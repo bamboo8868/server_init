@@ -56,4 +56,4 @@ apt install redis-server -y;
 
 echoGreen '----------------正在安装rabbitmq------------'
 docker pull rabbitmq:3.9.22-management-alpine
-docker run -it -d -p 5672:5672 -p 15672:15672 rabbitmq:3.9.22-management-alpine --restart=always
+docker run  -d -p 5672:5672 -p 15672:15672 --restart=always rabbitmq:3.9.22-management-alpine 
