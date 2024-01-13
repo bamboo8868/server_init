@@ -7,7 +7,7 @@ function echoGreen() {
 
 echoGreen "安装程序初始化中"
 apt update;
-apt insatll wget unzip curl -y;
+apt install wget unzip curl -y;
 
 
 echoGreen "------------正在安装nodejs------------"
