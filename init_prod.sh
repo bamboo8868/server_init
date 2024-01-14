@@ -1,5 +1,6 @@
 #/bin/env bash
 
+NODE_VERSION='20.11.0'
 
 function echoGreen() {
 	echo -e "\033[32m $@ \033[0m"
@@ -11,9 +12,13 @@ apt install wget unzip curl -y;
 
 
 echoGreen "------------正在安装nodejs------------"
-curl -fsSL https://fnm.vercel.app/install | bash
-source .bashrc 
-fnm install --lts 
+wget https://nodejs.org/download/release/latest-v20.x/node-v${NODE_VERSION}-linux-x64.tar.gz -O node.tar.gz
+tar -zxvf node.tar.gz
+mv node-v${NODE_VERSION}-linux-x64 /usr/local/
+echo PATH=/usr/local/node-v${NODE_VERSION}-linux-x64/bin:'$PATH' >> .profile
+source .profile
+npm install pm2 http-server -g
+
 
 echoGreen '----------------正在安装openresty--------------'
 apt-get -y install --no-install-recommends wget gnupg ca-certificates
