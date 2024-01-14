@@ -18,6 +18,7 @@ mv node-v${NODE_VERSION}-linux-x64 /usr/local/
 echo PATH=/usr/local/node-v${NODE_VERSION}-linux-x64/bin:'$PATH' >> .profile
 source .profile
 npm install pm2 http-server -g
+rm -rf node.tar.gz
 
 
 echoGreen '----------------正在安装openresty--------------'
